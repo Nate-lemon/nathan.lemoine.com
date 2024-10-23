@@ -67,7 +67,7 @@
             width: 100%; /* Largeur de la ligne */
         }
 
-	main {
+	    main {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -79,7 +79,6 @@
             margin: 0 auto; /* Centre le contenu */
         }
 
-
         .photo {
             display: block;
             margin-left: auto;
@@ -90,12 +89,10 @@
             margin-bottom: 2rem;
         }
 
-        dt {
-            text-align: justify; /* Garde le texte des <dt> aligné à gauche */
-        }
-
-        p {
-            text-align: justify; /* Garde le texte des <dt> aligné à gauche */
+        dt, p {
+            text-align: justify; /* Aligne le texte en justifié */
+            max-width: 100%; /* S'assurer que le texte ne dépasse pas la page */
+            overflow-wrap: break-word; /* Évite le débordement des mots longs */
         }
 
         footer {
@@ -154,19 +151,19 @@
                 flex-direction: column; /* Changer l'orientation en colonne sur petits écrans */
                 align-items: center; /* Centrer les éléments */
             }
-	    main, footer {
-    	        max-width: 1200px; /* Limite la largeur à 1200px */
-   		margin: 0 auto; /* Centre le contenu */
+            main, footer {
+    	        max-width: 800px; /* Limite la largeur à 800px */
+   	        margin: 0 auto; /* Centre le contenu */
 	    }
 
             .photo {
                 max-width: 80%; /* Ajuste l'image sur petits écrans */
-                margin-right: 0; /* Enlève la marge à droite sur petits écrans */
                 margin-bottom: 1rem; /* Ajoute de l'espace en bas de l'image */
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <img class="logo_home" src="Logo.png" alt="Logo">
