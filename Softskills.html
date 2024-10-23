@@ -1,13 +1,13 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Soft Skills</title>
+    <title>Applications</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <meta name="description" content="Accueil">
-    <meta name="keywords" content="projets, faisabilité, impact, données">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="keywords" content="Applications, CV, Soft Skills, Contact">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"> <!-- Importation de la police -->
     <style>
         :root {
             --primary-color: rgb(0, 84, 74); /* Couleur primaire verte plus neutre */
@@ -18,21 +18,22 @@
 
         body {
             font-family: var(--font-family);
+            font-size: 18px;
             line-height: 1.6;
             color: var(--secondary-color);
             background-color: var(--background-color);
             margin: 0;
             padding: 0;
             transition: background-color 0.3s;
-            width: 100vw; /* Prendre toute la largeur de la fenêtre */
             overflow-x: hidden; /* Éviter les débordements horizontaux */
+        }
 
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 2rem;
+            padding: 2rem; /* Plus d'espace pour le header */
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Espace entre logo et nav */
             align-items: center;
         }
 
@@ -50,17 +51,19 @@
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: bold; 
+            font-size: 20px;
         }
 
         .logo_home {
-            max-width: 150px;
+            max-width: 150px; /* Taille ajustée du logo */
         }
 
+        /* Ligne de séparation entre le header et le contenu */
         .separator {
-            height: 1px;
-            background-color: black;
-            width: 100%;
+            height: 1px; /* Épaisseur de la ligne réduite */
+            background-color: black; /* Couleur de la ligne */
+            width: 100%; /* Largeur de la ligne */
         }
 
         main {
@@ -69,26 +72,26 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            text-align: center;
             padding: 2rem;
-        }
-
-        h1 {
-            text-align: center; /* Centrer le texte du h1 */
-            color: var(--primary-color);
+            max-width: 1200px; /* Limite la largeur du contenu pour éviter le zoom */
+            margin: 0 auto; /* Centre le contenu */
         }
 
         .photo {
             display: block;
             margin-left: auto;
             margin-right: auto; /* Centrer l'image */
-            max-width: 60%;
-            height: auto;
+            max-width: 100%; /* Laisse l'image utiliser toute la largeur */
+            height: auto; /* Conserve le ratio d'aspect */
             border-radius: 10px;
             margin-bottom: 2rem;
         }
 
-        dt {
-            text-align: justify; /* Garde le texte des <dt> aligné à gauche */
+        dt, p {
+            text-align: justify; /* Aligne le texte en justifié */
+            max-width: 100%; /* S'assurer que le texte ne dépasse pas la page */
+            overflow-wrap: break-word; /* Évite le débordement des mots longs */
         }
 
         footer {
@@ -98,7 +101,7 @@
             padding: 1rem;
             background-color: var(--primary-color);
             color: white;
-            position: relative;
+            position: relative; /* Position relative pour le footer */
             bottom: 0;
             width: 100%;
         }
@@ -106,6 +109,16 @@
         footer img {
             max-width: 35px;
             height: auto;
+        }
+
+        section {
+            margin: 2rem 0; /* Espacement entre les sections */
+            border-top: 1px solid black; /* Ligne de séparation noire */
+            padding-top: 2rem; /* Espace entre la ligne et le contenu */
+        }
+
+        h1, h2 {
+            color: var(--primary-color); /* Couleur des titres */
         }
 
         .cta-button {
@@ -120,30 +133,28 @@
             display: inline-block;
         }
 
+        /* Responsive design */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
                 align-items: flex-start;
             }
-
             nav ul {
                 flex-direction: column;
             }
-
             nav li {
                 margin-right: 0;
                 margin-bottom: 0.5rem;
             }
-
             main {
-                flex-direction: column;
-                align-items: center;
+                flex-direction: column; /* Changer l'orientation en colonne sur petits écrans */
+                align-items: center; /* Centrer les éléments */
+                max-width: 90%; /* Limite la largeur à 90% sur petits écrans */
             }
 
             .photo {
-                max-width: 80%;
-                margin-right: 0;
-                margin-bottom: 1rem;
+                max-width: 100%; /* Ajuste l'image pour utiliser toute la largeur */
+                margin-bottom: 1rem; /* Ajoute de l'espace en bas de l'image */
             }
         }
     </style>
