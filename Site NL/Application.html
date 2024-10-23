@@ -1,0 +1,297 @@
+<!DOCTYPE html> 
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Applications</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Accueil">
+    <meta name="keywords" content="Applications, CV, Soft Skills, Contact">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"> <!-- Importation de la police -->
+    <style>
+        :root {
+            --primary-color: rgb(0, 84, 74); /* Couleur primaire verte plus neutre */
+            --secondary-color: #2c2c2c; /* Couleur secondaire */
+            --background-color: rgba(245, 239, 230, 1); /* Couleur de fond mise à jour */
+            --font-family: 'Noto Serif JP', serif; /* Police mise à jour */
+        }
+
+        body {
+            font-family: var(--font-family);
+    	    font-size: 18px;
+            line-height: 1.6;
+            color: var(--secondary-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s;
+            width: 100vw; /* Prendre toute la largeur de la fenêtre */
+            overflow-x: hidden; /* Éviter les débordements horizontaux */
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem; /* Plus d'espace pour le header */
+            display: flex;
+            justify-content: space-between; /* Espace entre logo et nav */
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold; 
+    	    font-size: 20px;
+        }
+
+        .logo_home {
+            max-width: 150px; /* Taille ajustée du logo */
+        }
+
+        /* Ligne de séparation entre le header et le contenu */
+        .separator {
+            height: 1px; /* Épaisseur de la ligne réduite */
+            background-color: black; /* Couleur de la ligne */
+            width: 100%; /* Largeur de la ligne */
+        }
+
+        main {
+            display: flex;
+            flex-direction: column; /* Aligne les éléments en colonne */
+            justify-content: center; /* Centre verticalement */
+            align-items: center; /* Centre horizontalement */
+            min-height: 100vh; /* Assure que la section prend toute la hauteur de la page */
+            text-align: center; /* Centre le texte */
+            padding: 2rem;
+        }
+
+
+        .photo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* Centrer l'image */
+            max-width: 60%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        dt {
+            text-align: left; /* Garde le texte des <dt> aligné à gauche */
+        }
+
+        p {
+            text-align: left; /* Garde le texte des <dt> aligné à gauche */
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            position: relative; /* Position relative pour le footer */
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer img {
+            max-width: 35px;
+            height: auto;
+        }
+
+        section {
+            margin: 2rem 0; /* Espacement entre les sections */
+            border-top: 1px solid black; /* Ligne de séparation noire */
+            padding-top: 2rem; /* Espace entre la ligne et le contenu */
+        }
+
+        h1, h2 {
+            color: var(--primary-color); /* Couleur des titres */
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            main {
+                flex-direction: column; /* Changer l'orientation en colonne sur petits écrans */
+                align-items: center; /* Centrer les éléments */
+            }
+            .photo {
+                max-width: 80%; /* Ajuste l'image sur petits écrans */
+                margin-right: 0; /* Enlève la marge à droite sur petits écrans */
+                margin-bottom: 1rem; /* Ajoute de l'espace en bas de l'image */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo_home" src="../Site NL/Logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Application.html">Applications</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Softskills.html">Soft Skills</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="separator"></div> <!-- Ligne de séparation ajoutée ici -->
+    <main>
+        <div class="inspiring-text"> 
+	    <h1>1) Ma passion pour la Biologie :</h1> <br><br>
+            <img class="photo" src="../Site NL/Application/Labo.png" alt="Labo">
+
+<dt> Pendant mon BTS, j'ai réalisé un stage en autopsie et bactériologie, au cours duquel j'ai mené une recherche sur l'estimation du portage de <i>Enterococcus cecorum</i> chez des poussins âgés de 1 à 10 jours. Cette bactérie, responsable de la mort de nombreux élevages de volailles, devait être localisée, si celle-ci était dans les couvoirs ou les élevages. Les poussins, soumis à une lumière artificielle 24h/24, avaient un excès de vitamine D, favorisant une croissance rapide. Cette croissance accélérée engendrait des micro-cisaillements au niveau de la tête fémorale, créant des conditions favorables à la contamination par cette bactérie, que l’on retrouvait dans ces fentes ainsi que dans le cæcum de l’intestin. J’avais donc une routine de technicien de laboratoire en bactériologie, en plus de mes recherches sur cette bactérie dans les poussins. <br>
+En deuxième année, en groupe, nous avons mis au point un protocole de micropropagation (culture in vitro) de la plante carnivore <i>Dionaea muscipula</i>. Nous avons fait varier les concentrations de phytohormones (auxine et cytokinine) ainsi que d'autres paramètres pour optimiser la culture. <br>
+<br>
+            <img class="photo" src="../Site NL/uco-angers.jpg" alt="Photo UCO Angers">
+            <p></p>
+Après l’obtention de mon BTS, j’ai intégré une L2 en Sciences de la vie et de la terre à l'Université Catholique de l'Ouest à Angers. Etant déjà une personne relativement engagé, j'ai pris le poste d'Ambassadeur de l’Université, avec pour mission de promouvoir les différents parcours proposés dans l’ouest de la France. Ce travail, cumulé à mes jobs d’été, m’a permis de financer mes études. <br>
+Au cours de cette licence, j'ai effectué un stage de recherche à la Plateforme d'Analyse Cellulaire et Moléculaire (PACEM) à l'Institut de Biologie en Santé d'Angers, où j'ai acquis des compétences en PCR, cytométrie en flux et biologie cellulaire. En parallèle, j’ai suivi une spécialité et réalisé un stage en tant que professeur des écoles, car ma passion pour l'enseignement était déjà présente. <br>
+<br>
+Puis est venue la période COVID. Pendant ma licence, j'ai suivi des cours sur les enjeux écologiques, et c’est à ce moment-là que j'ai pris conscience de l’urgence environnementale. L'été suivant, j’ai travaillé comme technicien supérieur de laboratoire à la plateforme COVID du CHU de Nantes, où nous étions en pleins "RUSH" pour analyser les tests PCR. L’ambiance était bonne, et j'ai rapidement gagné en compétences et en confiance, au point de former les nouveaux arrivants et de gérer le laboratoire en fin de CDD.<br>
+Pendant ce même été, le 5 juin, le jour de mon anniversaire, j’ai découvert la vidéo "Réveillez-vous" de Camille Etienne et Solal Moisan. <br> Toutes ces paroles synthétisaient à ce moment-là, mes pensées. "Ne rien dire c'est être d'accord, ne rien faire c'est ne pas vouloir que les choses changent".  J'ai ainsi stalké toutes ces vidéos, et mon nouveau passe temps venait de se créer, l'ÉCOLOGIE. J’ai acheté L'Économie bleue de Gunter Pauli qui fût vraiment très intéressant, un livre dont j'avais entendu parler grâce à Idriss Aberkane, dont j'avais également lu son livre "<i>Libérez votre cerveau</i>". Malheureusement, avec le temps, j'ai constaté (selon moi) qu'Idriss dérive peu à peu dans la tentation du gain et ainsi inscrire l'éloge entre vérité et mensonge pour augmenter sa communauté.</dt>
+            <h1>2) Vers un engagement écologique :</h1>
+<br>
+            <img class="photo" src="../Site NL/Application/OEP.png" alt="OEP">
+
+<dt> En Licence 3, j’ai pris le poste d’Ambassadeur COVID. C’était assez amusant car je me faisais payer pendant la pause déjeuner pour sensibiliser les gens et leur rappeler de porter leur masque. J’ai aussi rejoint le mouvement "On est prêt", dont Camille Etienne était la porte-parole. Ma mission consistait à créer des infographies sur la relation entre la COVID-19 et l’environnement. À l’époque, la directrice éditoriale était la grande journaliste Paloma Moritz. Bien que mon travail n'ait pas eu un grand impact, cet engagement a marqué le début de mon parcours écologique. </dt>
+<br>
+            <img class="photo" src="../Site NL/Application/Penser l'après/Penser l'Après.png" alt="Labo">
+
+<dt> Par la suite, j’ai été invité par Stacy Algrain à rejoindre son média associatif dédié à la transition écologique, sociale et solidaire, appelé "Penser l’Après". Ma mission initiale était de travailler sur le thème "agriculture et alimentation" Cette collaboration a abouti à une après-midi dédiée à ce sujet à la Cité Fertile à Paris, où j'animais une table ronde et filmait conférence et interview pendant l'événement. J’étais également chargé de rédiger les descriptions des podcasts, ce qui m'a permis d'approfondir mes connaissances sur des sujets variés, tels que l’écologie, le patriarcat et les débats sur le genre. </dt>
+<br>
+
+            <img class="photo" src="../Site NL/Application/Team for the planet/4.png" alt="10">
+
+<dt> À ce même moment, j'ai intégré Team for the planet, une entreprise à but non lucratif permettant de faire passer les innovations luttant contre le changement climatique à l'état d'entreprise, tout en mettant ces innovations en open-source pour faire marcher la concurrence. Étant actionnaire et évaluateur d'innovation, j'aperçois les innovations futures et me permet de participer à leur élaboration. </dt>
+<br> 
+<br> 
+            <img class="photo" src="../Site NL/Application/VirtualZOO.png" alt="VirtualZOO">
+
+<dt>En fin de licence, j’ai assisté à un événement sur la réalité virtuelle, pour lequel ma mère m’avait transmis un pass via son entreprise. Arrivé devant le stand de Light and Shadow qui s'appelle maintenant LS Group, un bureau d'études travaillant pour (Unity, Stellantis, Renaud, Airbus, Dior, Alstom, etc..) je leur ai présenté une idée qui a immédiatement suscité leur intérêt : repenser le modèle des zoos.  Le problème des zoos réside dans le dérangement constant des animaux par les visiteurs, ainsi que dans le manque d’espace suffisant pour la plupart des espèces. Mon idée consistait à développer des sanctuaires de biodiversité équipés de caméras 360° et d’utiliser des casques de réalité virtuelle pour observer des biomes et leurs espèces en temps réel, sans perturber leur environnement. Cela permettrait une immersion totale dans la nature, tout en sensibilisant à la préservation des espèces. <br> Après cet échange, LS Group m’a invité à une visioconférence où ils ont déclaré que cette innovation pourrait avoir recevoir un prix Nobel et qu'ils étaient prêts à financer le projet et à me nommer responsable de ce projet.  J’ai alors travaillé sur une modélisation 3D avec interface graphique pour représenter les différents biomes. J’étais prêt à présenter le projet, mais l'annonce du métavers de Mark Zuckerberg m'a fait réfléchir. J'ai tout de suite vu un problème car la métaverse pourrait sans nul doute vouloir racheter le Virtual-Zoo ou même sans inspirer. L'objectif de l'innovation, ce n'est pas de s'isoler dans un monde virtuel mais bien d'être sensibiliser sur le vivant et sans déranger les espèces en voie de disparition. J'ai donc arrêté ce projet.</dt>
+<br>
+            <img class="photo" src="../Site NL/Application/Veolia/11.png" alt="11">
+            <img class="photo" src="../Site NL/Application/Veolia/12.png" alt="12">
+
+<dt>Par la suite, j'ai intégré un Master en Biodiversité, Écologie et Évolution, spécialité Écologie et Développement Durable, en alternance en tant que chargé de la préservation de la ressource en eau potable chez Veolia.
+<br>
+Ma mission initiale était d'élaborer un plan d'action pour accompagner les dix plus gros consommateurs d'eau potable de la communauté d'agglomération du Boulonnais. Ayant accès à la liste de ces consommateurs, je les ai sélectionnés et ai développé un carnet d'adresses en les contactant un par un. Après avoir élaboré ce plan d'action, je leur ai présenté et fixé des dates d'audit. La durée de ces audits variait de 2 heures à 3 jours selon le type d'activité. À la suite de ces audits, j'ai réalisé une étude détaillant des solutions adaptées à chaque entreprise.
+<br>
+Avant cela, j'ai mené des entretiens avec des innovateurs pour découvrir leurs innovations en détail. Après avoir finalisé ces études, je les ai présentées à chaque activité en exposant les innovations pertinentes ainsi que leur retour sur investissement.
+<br>
+Ma maîtrise du projet m'a permis de travailler en parallèle sur d'autres missions. J'ai ainsi réalisé des études sur la récupération des eaux pluviales pour diverses activités (carrière, jardin partagé, camping, etc.) sur le territoire du Littoral Audomarois. J'ai également mené des études d'impact pour la mise en place de projets urbains, notamment sur les réseaux de chaleur urbains et la réutilisation des eaux usées traitées pour des golfs et un hippodrome, en déterminant les coûts associés, que ce soit dans le cadre d'avenants ou de projets privés. J'ai acquis une solide connaissance de la réglementation associée et des demandes de financement via des appels à projets, notamment auprès de l'Agence de l'Eau.
+<br>
+En parallèle, j'ai animé des ateliers de sensibilisation à l'environnement pour différents publics, allant des enfants aux élus, et j'ai conçu un jeu éducatif pour sensibiliser aux enjeux environnementaux. J'ai aussi effectué un recensement des résurgences d'eau, jugées comme parasitaires aux réseaux, et analysé leur qualité, déterminant ainsi les usages possibles de ces eaux à proximité.
+<br>
+J'ai développé un système cartographique optimisé pour la gestion de projets environnementaux, recensant plus d'une trentaine de projets sur le territoire. De plus, j'ai conçu et codé un intranet pour Veolia, intégrant l'ensemble de ces projets, avec un système d'évaluation basé sur la faisabilité financière, l'impact sur la ressource en eau, et la rentabilité. Ce système génère un score et un nuage de points permettant de visualiser les priorités d'actions en superposant ces variables, facilitant ainsi la sélection des projets à mettre en œuvre en priorité.
+<br>
+</dt>
+<br>
+            <img class="photo" src="../Site NL/Application/PPLB1.png" alt="PPLB1">
+            <img class="photo" src="../Site NL/Application/PPLB2.png" alt="PPLB2">
+
+<dt> Lors de cette première année de Master, j'ai été à un événement "lab-project" à Lilles organisé par l'Office Franco-allemande de la jeunesse (OFAJ), j'ai donc mobilisé les personnes du média Pensé l'après pour m'accompagner pour aller à cette événement, notamment Maud et Charles, pour m'accompagner à cet événement. Nous y avons rencontré des personnes formidables, dont des participants franco-allemands et allemands, et ensemble, nous avons cofondé le projet Pédaler pour la Biodiversität. Le but de ce projet était de parcourir 600 km à vélo dans le département de la Gironde, en traversant 5 réserves naturelles, afin de réaliser de petits reportages pour sensibiliser à la biodiversité tout au long du parcours. </dt>
+
+            <img class="photo" src="../Site NL/Application/Cop3 Etudiante/9.png" alt="9">
+            <img class="photo" src="../Site NL/Application/Cop3 Etudiante/10.png" alt="10">
+
+<dt>Alors que je poursuivais mon master en alternance, tout en étant encore impliqué dans "Penser l'Après", évaluateur d'innovations pour Team for the Planet et chargé de partenariats pour Pédaler pour la Biodiversität, j'ai reçu un mail de l'université. Il s'agissait d'une initiative d'étudiants des Arts et Métiers cherchant des jeunes motivés pour organiser un événement à Angers. J'ai donc participé à la visioconférence et me suis retrouvé avec trois jeunes, dont Mathieu et Cyril. Ils m'ont présenté les précédentes éditions de la COP Étudiante, et j'ai immédiatement accepté de me joindre à eux. Après une brève présentation de mon parcours, ils ont été impressionnés.
+<br>
+Lors d'une seconde visioconférence, j'ai rencontré Lucie, et a nous tous, nous avons décidé des thématiques sur lesquelles nous allions travailler. Initialement, j'étais chargé de la responsabilité sociétale des entreprises (RSE), mais au fil du temps et grâce à mes contacts, j'ai pris la responsabilité de Vice-président des relations externes et partenariats. Avec Mathieu, Lucie et Cyril, nous avons passé d'innombrables heures à avancer sur le projet, en organisant des débriefings longs chaque semaine ou toutes les deux semaines.
+<br>
+Ce qui a commencé comme un petit projet a finalement donné naissance à un événement d'envergure, parrainé par Yann Arthus Bertrand, qui s'est déroulé sur trois jours au Centre des Congrès et à l'Université d'Angers. L'événement comprenait des conférences, des tables rondes avec des experts de la biodiversité, de l'énergie, des transports et de l'eau, etc... on pouvait y trouver des ateliers de sensibilisation, un forum des métiers engagés avec une trentaine de stands, ainsi qu'un festival Art et Écologie. Ce dernier proposait des projections de films avec des interventions de réalisateurs, des spectacles d'une compagnie artistique de danse, des concerts, et de l'art participatif.
+<br>
+Cet événement réunissant près de 3000 personnes de tous types d'activités et de tout âge permettant d'agir tous ensemble sous le discours d'élaborer la ville durable de demain.  Après cette aventure, la COP 3 Etudiante continue à s'engager dans plusieurs actions locales auprès des acteurs du territoire. Mon travail se poursuivait par de la sensibilisation et  présenter l'événement qu'on avait effectué. "</dt>
+<br>
+
+
+<video controls width="800" autoplay loop > 
+	<source src="../Site NL/Application/NatExplorers.mp4"/>
+</video>
+
+<p>Pendant mon Master 2, j'ai effectué un projet tuteuré en groupe qui consistait à créer des outils de médiation scientifique ciblés sur les jeunes de mon âge. Cette médiation était centrée sur le projet Loire Sentinelle, une aventure menée par mes professeurs aventuriers lors de leur périple de l'année précédente. Leur entreprise s'appelle NatExplorers (n'hésitez pas à jeter un œil à leur site). Ils ont traversé toute la Loire en canoë et à pied, soit 1000 km, tout en réalisant des prélèvements d'eau et de sédiments. Ces prélèvements avaient pour but d'analyser l'ADN environnemental afin de déterminer les espèces présentes dans chaque zone, ainsi que la présence et le type de micro et nanoplastiques. Ils ont également mené des actions de sensibilisation sur la pollution et le déclin de la biodiversité tout au long de leur parcours. Pour moi, ces deux professeurs sont de véritables exemples de réussite.
+<br>
+Aujourd'hui, la question des micro et nanoplastiques n'a plus de secret pour nous. D'une part, nos professeurs d'université travaillent sur ce sujet, ce qui nous a permis de réaliser nous-mêmes des analyses écotoxicologiques. D'autre part, nous avons organisé un événement avec l'ensemble de notre promotion et nos professeurs référents, qui comprenait des tables rondes et des conférences sur le thème du plastique.
+</p>
+<br>
+<dt>Après mon Master, j'ai effectué un contrat professionnel entre Veolia et un programme de formation qui s'appelle "Inspired Change". Ce programme me permet de réaliser un contrat professionnel de neuf mois en entreprise et ainsi poursuivre mes mission chez Veolia, suivi de trois mois de formation au siège des Nations Unies à New York.</dt>
+<p>Pendant les 9 mois, je continue mes projets avec Veolia, s'y ajoute un côté chargé d'affaires notamment pour des contrats en rapport avec l'environnement, un sujet devenu encore plus crucial après les inondations dévastatrices dans le Pas-de-Calais. En parallèle, je reste actif dans mes engagements associatifs, prends des cours d'anglais pour être prêt à l'approche de mon départ pour New York, et donne ma première conférence à l'Université Catholique de l'Ouest. Par la suite, lors de la cérémonie de remise de diplômes, j’ai l’honneur de prendre la parole au nom de ma promotion. J'en profite pour remercier l'assemblée et partager quelques mots sur les enjeux environnementaux face à un public de plusieurs centaines de personnes.
+<br>
+<br>
+            <img class="photo" src="../Site NL/Application/Youth4Ocean/Y4O.png" alt="Y4O">
+
+Un soir, ma nouvelle colocataire m'invite à une conférence qui se tient à Nausicaa (le plus grand aquarium d'Europe) situé à seulement quinze minutes de chez moi. Ces conférences étaient organisées par les étudiants en master de l’université ULCO. À la fin de la conférence, je croise une tête que j'avais déjà vu. Je me présente, et propose de faire un partenariat pour faire des animations. Très enthousiaste de mon engagement, il me tend sa carte : c'était le directeur de Nausicaa. Il m'informe que je pourrais intervenir en tant que conférencier et animateur à Nausicaa, et me met en contact avec le service d'animation.
+Les jours suivants, j'envoie un mail, et le chargé des relations internationales de Nausicaa prend rapidement contact avec moi. 
+<br>
+Nous avons une visioconférence où je présente mes activités et mes projets. C’est à ce moment qu’il m'invite à rejoindre le programme "Youth4Ocean", une initiative de la Commission Européenne visant à sensibiliser le public sur les océans et à protéger les habitats et espèces marins.Lors de notre échange, je lui parle de mon futur voyage à New York, où il évoque la possibilité de participer à une conférence lors de la Journée Mondiale des Océans (World Oceans Day) des Nations Unies qui se passe justement à New York pendant que j'y suis.
+<br>
+Malheureusement, ma candidature pour représenter le programme n’a pas été retenue. Néanmoins, une semaine avant le début de l'événement à New York, grâce à Liberato Bautista (Levy), président de la CoNGO (Conference of Non-Governmental Organizations in Consultative Relationship with the United Nations), j’obtiens mon badge pour accéder aux Nations Unies.
+
+            <img class="photo" src="../Site NL/Application/Youth4Ocean/WOD.png" alt="WOD">
+
+Je me rends donc à la Journée Mondiale des Océans, où j’ai l'opportunité de rencontrer et d’échanger avec de nombreuses intervenants comme la fondatrice d’Ocean Global, la fondatrice de la Re-Earth Initiative, la créatrice de National Geographic & Mission Blue, ainsi qu’une actrice d’Avatar 2 et j'en passe. Ce fût un moment incroyable. </p>
+
+            <img class="photo" src="../Site NL/Application/Inspired change/16.png" alt="ICC">
+            <img class="photo" src="../Site NL/Application/Inspired change/17.png" alt="ICC">
+            <img class="photo" src="../Site NL/Application/Inspired change/18.png" alt="ICC">
+<p> Lors du programme Inspired Change, nous avons eu plusieurs cours avec des intervenants et des formations à suivre sur la plateforme des Nations Unies, UNITAR. J'ai pu participer à de nombreuses conférences sur différentes thématiques, que ce soit au Conseil de sécurité ou en comité restreint. Au mois de juillet s'est tenu le High-Level Political Forum (HLPF), un événement de deux semaines ayant lieu à New York, au siège de l'ONU, et ce fut très gratifiant. La fin du programme avait pour objectif l'élaboration d'un mémoire de recherche sur un des Objectifs de développement durable, qui pourrait par la suite être publié par l'ONU. Cette expérience m'a permis d'élargir mon réseau au niveau international, de perfectionner mon anglais et d'acquérir de nouvelles connaissances sur le fonctionnement du monde afin d'y apporter des solutions déjà existantes mais qui doivent aujourd'hui être appliquées.</p>
+            <img class="photo" src="../Site NL/Application/Inspired change/19.png" alt="ICC">
+
+<video controls width="800" autoplay loop > 
+	<source src="../Site NL/Application/Inspired Change/Cata.mp4"/>
+</video>
+
+<p>Mon projet de recherche porte sur le sujet : La relation entre les déplacés environnementaux intra-régionaux et la ressource en eau dans la région des Hauts-de-France d'ici 2050. À travers ce rapport, j'ai actualisé l'état des connaissances sur les risques environnementaux, estimé le nombre de déplacés environnementaux, et imaginé leurs conditions de vie en fonction des diverses approches prospectivistes ainsi que de la vision des jeunes.</p>
+
+        </div>
+    </main>
+<footer style="text-align: left;"> <!-- Aligner le contenu à gauche -->
+    <p style="display: inline;">&copy; 2024 N. Lemoine<a href="file:///D:/NLD/Site%20NL/Message%20cach%C3%A9.html" style="color: inherit; text-decoration: none; cursor: pointer;">.</a></p> 
+
+ </div>
+        <a href="https://www.linkedin.com/in/nathan-lemoine-377b2515b/">
+            <img src="../Site NL/logo LinkedIn.png" alt="Logo LinkedIn">
+        </a>
+    </footer>
+</body>
+
+</html>

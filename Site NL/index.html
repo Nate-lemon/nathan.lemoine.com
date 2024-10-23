@@ -1,0 +1,185 @@
+<!DOCTYPE html>  
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accueil du site de Nathan Lemoine, biologiste et ingénieur en environnement"> 
+    <meta name="keywords" content="biologiste, environnement, CV, soft skills, contact">
+    <title>Site de Nathan Lemoine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: rgb(0, 84, 74);
+            --secondary-color: #2c2c2c;
+            --background-color: rgba(245, 239, 230, 1);
+            --font-family: 'Noto Serif JP', serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--secondary-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logo_home {
+            max-width: 120px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative; /* Ajouté pour positionner le lien caché */
+        }
+
+        .photo {
+            max-width: 30%;
+            margin-right: 2rem;
+            border-radius: 10px;
+        }
+
+        .inspiring-text {
+            max-width: 60%;
+        }
+
+        h1,
+        h2 {
+            color: var(--primary-color);
+        }
+
+        /* Section avec fond blanc pour le bouton et traits de séparation */
+        .cta-section {
+            background-color: rgba(245, 239, 230, 1); /* Fond blanc pour la section */
+            padding: 2rem 0; /* Padding pour espacer la section */
+            text-align: center; /* Centre le bouton dans la section */
+            border-top: 1px solid black; /* Trait de séparation en haut */
+            border-bottom: 1px solid black; /* Trait de séparation en bas */
+        }
+
+        .cta-button {
+            background-color: rgb(0, 84, 74); 
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 1rem auto; /* Centre le bouton horizontalement */
+            display: block;
+            text-align: center;
+            max-width: 400px; /* Largeur maximale pour le bouton */
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+	    font-family: 'Playfair Display', serif;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer img {
+            max-width: 35px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo {
+                max-width: 80%;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo_home" src="../Site NL/Logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Application.html">Applications</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Softskills.html">Soft Skills</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Section avec fond blanc pour le bouton et traits de séparation -->
+    <section class="cta-section">
+        <a href="https://team-planet.com/fr/pots/574a40e8e07d284a042122813bfe8355/redirect" class="cta-button">Pour la lutte contre le changement climatique : Devenez actionnaire à partir de 1€</a>
+    </section>
+
+    <div class="separator"></div> <!-- Ligne de séparation noire -->
+
+    <main>
+        <img class="photo" src="../Site NL/WhatsApp Image 2024-04-08 at 15.32.325.jpeg" alt="Portrait de Nathan Lemoine">
+        <div class="inspiring-text">
+            <h1>Nathan Lemoine</h1>
+            <p>Biologiste, Ingénieur en environnement et analyste de recherche</p>
+            <p>Originaire de Laval, j'ai suivi un parcours académique solide en biologie, écologie et développement durable, avec un Master en Biodiversité et Écologie. J'ai également participé au programme Inspired Change au siège des Nations Unies.</p>
+            <p>Un jeune très engagé dans les associations</p>
+        </div>
+    </main>
+
+<footer style="text-align: left;"> <!-- Aligner le contenu à gauche -->
+    <p style="display: inline;">&copy; 2024 N. Lemoine<a href="file:///D:/NLD/Site%20NL/Message%20cach%C3%A9.html" style="color: inherit; text-decoration: none; cursor: pointer;">.</a></p> 
+
+ </div>
+        <a href="https://www.linkedin.com/in/nathan-lemoine-377b2515b/">
+            <img src="../Site NL/logo LinkedIn.png" alt="Logo LinkedIn">
+        </a>
+    </footer>
+</body>
+
+</html>

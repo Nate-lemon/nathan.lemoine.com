@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Accueil">
+    <meta name="keywords" content="projets, faisabilité, impact, données">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: rgb(0, 84, 74); 
+            --secondary-color: #2c2c2c; 
+            --background-color: rgba(245, 239, 230, 1); 
+            --font-family: 'Noto Serif JP', serif; 
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--secondary-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            overflow-x: hidden; /* Évite le débordement horizontal */
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 100%; /* Assure que le header ne déborde pas */
+            box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logo_home {
+            max-width: 150px;
+            height: auto; /* Assure que l'image garde ses proportions */
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex: 1; 
+            padding: 2rem;
+            max-width: 100%; /* Assure que le main ne déborde pas */
+            box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+        }
+
+        h1 {
+            text-align: center; 
+            color: var(--primary-color);
+        }
+
+        .photo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto; 
+            max-width: 50%; /* Réduire la taille des photos à 50% */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 1rem; 
+            background-color: var(--primary-color); 
+            color: white; 
+            width: 100%; 
+            position: relative; 
+            bottom: 0; 
+            margin-top: auto; 
+            box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+        }
+
+        footer img {
+            max-width: 35px; 
+            height: auto; 
+            margin-left: 10px; 
+        }
+
+        footer p {
+            margin: 0; /* Pour éviter l'espacement vertical du paragraphe */
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo {
+                max-width: 70%; /* Ajuste la taille sur les écrans plus petits */
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo_home" src="../Site NL/Logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Application.html">Applications</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Softskills.html">Soft Skills</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="inspiring-text">
+            <h1>Mon Curriculum Vitae</h1>
+            <img class="photo" src="../Site NL/CVP1.png" alt="CV">
+            <img class="photo" src="../Site NL/CVP2.png" alt="CV">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 N. Lemoine</p>
+        <a href="https://www.linkedin.com/in/nathan-lemoine-377b2515b/">
+            <img src="../Site NL/logo LinkedIn.png" alt="Logo LinkedIn">
+        </a>
+    </footer>
+</body>
+</html>
+
+

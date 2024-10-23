@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Message caché</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accueil">
+    <meta name="keywords" content="projets, faisabilité, impact, données">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"> <!-- Importation de la police -->
+    <style>
+        :root {
+            --primary-color: rgb(0, 84, 74); /* Couleur primaire verte plus neutre */
+            --secondary-color: #2c2c2c; /* Couleur secondaire */
+            --background-color: rgba(245, 239, 230, 1); /* Couleur de fond mise à jour */
+            --font-family: 'Noto Serif JP', serif; /* Police mise à jour */
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--secondary-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s;
+            width: 100vw; /* Prendre toute la largeur de la fenêtre */
+            overflow-x: hidden; /* Éviter les débordements horizontaux */
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem; /* Plus d'espace pour le header */
+            display: flex;
+            justify-content: space-between; /* Espace entre logo et nav */
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold; /* Texte en gras pour les liens */
+        }
+
+        .logo_home {
+            max-width: 150px; /* Taille ajustée du logo */
+        }
+
+        /* Ligne de séparation entre le header et le contenu */
+        .separator {
+            height: 1px; /* Épaisseur de la ligne réduite */
+            background-color: black; /* Couleur de la ligne */
+            width: 100%; /* Largeur de la ligne */
+        }
+
+        main {
+            display: flex;
+            flex-direction: column; /* Aligne les éléments en colonne */
+            justify-content: center; /* Centre verticalement */
+            align-items: center; /* Centre horizontalement */
+            min-height: 100vh; /* Assure que la section prend toute la hauteur de la page */
+            text-align: center; /* Centre le texte */
+            padding: 2rem;
+        }
+
+        .photo {
+            max-width: 40%; /* Taille de l'image réduite */
+            height: auto;
+            border-radius: 10px; /* Coins arrondis pour les images */
+            margin-bottom: 2rem; /* Espace en bas de l'image */
+        }
+
+        dt {
+            text-align: left; /* Garde le texte des <dt> aligné à gauche */
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            position: relative; /* Position relative pour le footer */
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer img {
+            max-width: 35px;
+            height: auto;
+        }
+
+        section {
+            margin: 2rem 0; /* Espacement entre les sections */
+            border-top: 1px solid black; /* Ligne de séparation noire */
+            padding-top: 2rem; /* Espace entre la ligne et le contenu */
+        }
+
+        h1,
+        h2 {
+            color: var(--primary-color); /* Couleur des titres */
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav li {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+            main {
+                flex-direction: column; /* Changer l'orientation en colonne sur petits écrans */
+                align-items: center; /* Centrer les éléments */
+            }
+            .photo {
+                max-width: 80%; /* Ajuste l'image sur petits écrans */
+                margin-right: 0; /* Enlève la marge à droite sur petits écrans */
+                margin-bottom: 1rem; /* Ajoute de l'espace en bas de l'image */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img class="logo_home" src="../Site NL/Logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Application.html">Applications</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Softskills.html">Soft Skills</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="separator"></div> <!-- Ligne de séparation ajoutée ici -->
+    <main>
+        <div class="inspiring-text">
+            <h1> Bravo vous avez trouvé le message caché !</h1>
+            <img class="photo" src="../Site NL/unlock.png" alt="Unlock">
+            <p></p>
+
+            <h1> 0) Vers une passion pour la Science </h1>
+            <dt>En seconde, un soir, ma professeure principale convoque mes parents vers 18h et me fait faire un exercice d'histoire devant eux. Elle leur dit : "Vous voyez, votre enfant est nul, nous n'acceptons pas le redoublement de Nathan, il finira par faire un Bac Professionnel de soudure comme mon neveu." N'ayant jamais redoublé, j'ai pu accéder au redoublement. À partir de ce moment, j'avais la rage de réussir. J'ai téléchargé des cours de physique quantique et passé des heures, des jours, des semaines, des mois immergé à essayer de tout comprendre et à effectuer les exercices. Lors de mon redoublement, mes résultats étaient meilleurs ; je participais à l'oral, c'était à la fois une manière de vaincre peu à peu ma timidité et de mémoriser directement.
+<br><br>
+J'ai poursuivi par un bac scientifique. Pendant cette période, mon père avait un glaucome à chaque œil et allait perdre la vue dans les deux années qui suivaient. Mais quelque chose s'est passé : un gène s'est activé, et une protéine de régénération du nerf optique a été produite en lui, ce qui lui a permis de guérir. Un nerf optique régénéré, une pression sanguine qui diminue et, en plus, une acuité visuelle qui augmente. Je me suis donc renseigné à ce sujet, j'ai lu des livres et regardé de nombreuses conférences pour en savoir plus sur l'épigénétique et la biologie de synthèse.
+<br>
+Pendant cette même période, mes cousins, qui avaient fait fortune grâce à de nombreuses start-up, avaient subi un détournement d'argent, l'État les jugeant responsables. Un de mes cousins a été en prison à Fleury-Mérogis. Pendant qu'il était incarcéré, il préparait une dernière start-up afin de se sortir de cette pagaille financière qui leur tombait dessus. Je l'ai soutenu et nous avons discuté du fait que je pourrais être co-gérant de cette start-up qui devait voir le jour à São Paulo.
+<br>
+Mais cela n'a pas pu se faire, l'État surveillait de près mon cousin et allait empêcher toute possible action de création d'entreprise. Puis, mon autre cousin a disparu pendant deux mois à cause de la tromperie de sa femme brésilienne. Il a été retrouvé à l'hôpital d'Angers. N'ayant plus de contact avec la famille de sa femme, la start-up ne pouvait encore moins se faire.
+<br><br>
+Arrivé en terminale S, j'apprends le codage grâce à une spécialité en informatique et sciences du numérique. Je fais les portes ouvertes d'une école d'ingénieurs spécialisée dans le numérique et je dispose même d'un parrain qui est en première année de prépa là-bas. Toujours performant en biologie, j'ai cette dualité entre ces deux matières. J'acquiers mon bac scientifique et j'intègre un BTS (Brevet de Technicien Supérieur) en Analyses Biologiques et Biotechnologiques. C'est à partir de ce moment que je commence à m'engager, à la fois dans l'association du BTS, en tant que délégué de la promo, sous-délégué du lycée et délégué des élèves de la commission d'orientation au niveau régional du Centre National Agricole et Privé (CNEAP). Je me retrouve ainsi autour d'une table ronde avec des responsables de l'Éducation nationale à voter pour l'avenir des lycéens. La boucle était bouclée. </dt>
+
+    </main>
+
+<footer style="text-align: left;"> <!-- Aligner le contenu à gauche -->
+    <p style="display: inline;">&copy; 2024 N. Lemoine<a href="file:///D:/NLD/Site%20NL/Message%20cach%C3%A9.html" style="color: inherit; text-decoration: none; cursor: pointer;">.</a></p> 
+
+ </div>
+        <a href="https://www.linkedin.com/in/nathan-lemoine-377b2515b/">
+            <img src="../Site NL/logo LinkedIn.png" alt="Logo LinkedIn">
+        </a>
+    </footer>
+</body>
+
+</html>
+

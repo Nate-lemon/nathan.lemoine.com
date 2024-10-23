@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accueil">
+    <meta name="keywords" content="projets, faisabilité, impact, données">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Importation de la police -->
+
+    <style>
+        :root {
+            --primary-color: rgb(0, 84, 74);
+            --secondary-color: #2c2c2c;
+            --background-color: rgba(245, 239, 230, 1);
+            --font-family: 'Noto Serif JP', serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--secondary-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s;
+            width: 100vw; /* Prendre toute la largeur de la fenêtre */
+            overflow-x: hidden; /* Éviter les débordements horizontaux */
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 2rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .logo_home {
+            max-width: 150px;
+        }
+
+        .separator {
+            height: 1px;
+            background-color: black;
+            width: 100%;
+        }
+
+        main {
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .photo {
+            max-width: 20%;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 2rem;
+        }
+
+        .inspiring-text {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer img {
+            max-width: 35px;
+            height: auto;
+        }
+
+        section {
+            margin: 2rem 0;
+            border-top: 0px solid black;
+            padding-top: 2rem;
+        }
+
+        h1,
+        h2 {
+            color: var(--primary-color);
+    	    text-align: center;
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--font-family);
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 1rem 2rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .photo {
+                max-width: 80%;
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+    <script>
+        function redirectToMail(event) {
+            event.preventDefault(); // Empêche le formulaire de soumettre normalement
+
+            // Récupérer les valeurs du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Créer l'URL mailto
+            const subject = encodeURIComponent(`Prise de contact`);
+            const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\nMessage:\n${message}`);
+            const mailtoLink = `mailto:242051@etud.uco.fr?subject=${subject}&body=${body}`;
+
+            // Rediriger vers le mailto
+            window.location.href = mailtoLink;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <img class="logo_home" src="../Site NL/Logo.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="Application.html">Applications</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="Softskills.html">Soft Skills</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <form onsubmit="redirectToMail(event)">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <input type="submit" value="Envoyer" class="cta-button">
+        </form>
+    </section>
+
+<footer style="text-align: left;"> <!-- Aligner le contenu à gauche -->
+    <p style="display: inline;">&copy; 2024 N. Lemoine<a href="file:///D:/NLD/Site%20NL/Message%20cach%C3%A9.html" style="color: inherit; text-decoration: none; cursor: pointer;">.</a></p> 
+
+ </div>
+        <a href="https://www.linkedin.com/in/nathan-lemoine-377b2515b/">
+            <img src="../Site NL/logo LinkedIn.png" alt="Logo LinkedIn">
+        </a>
+    </footer>
+</body>
+
+</html>
+
+
