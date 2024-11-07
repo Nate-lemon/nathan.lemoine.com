@@ -1,124 +1,135 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Accueil du site de Nathan Lemoine, biologiste et ingénieur en environnement"> 
-    <meta name="keywords" content="biologiste, environnement, CV, soft skills, contact">
-    <title>Site de Nathan Lemoine</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <title>Applications</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Accueil">
+    <meta name="keywords" content="Applications, CV, Soft Skills, Contact">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet"> <!-- Importation de la police -->
     <style>
         :root {
-            --primary-color: rgb(0, 84, 74);
-            --secondary-color: #2c2c2c;
-            --background-color: rgba(245, 239, 230, 1);
-            --font-family: 'Noto Serif JP', serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+            --primary-color: rgb(0, 84, 74); /* Couleur primaire verte plus neutre */
+            --secondary-color: #2c2c2c; /* Couleur secondaire */
+            --background-color: rgba(245, 239, 230, 1); /* Couleur de fond mise à jour */
+            --font-family: 'Noto Serif JP', serif; /* Police mise à jour */
         }
 
         body {
             font-family: var(--font-family);
+            font-size: 18px;
+            line-height: 1.6;
             color: var(--secondary-color);
             background-color: var(--background-color);
-            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s;
+            overflow-x: hidden; /* Éviter les débordements horizontaux */
         }
 
         header {
             background-color: var(--primary-color);
             color: white;
-            padding: 1.5rem;
+            padding: 1rem; /* Plus d'espace pour le header */
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Espace entre logo et nav */
             align-items: center;
         }
 
         nav ul {
-            list-style: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             display: flex;
         }
 
         nav li {
-            margin-right: 1.5rem;
+            margin-right: 2rem;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: bold; 
+            font-size: 20px;
         }
 
         .logo_home {
-            max-width: 120px;
+            max-width: 150px; /* Taille ajustée du logo */
+        }
+
+        .separator {
+            height: 1px; /* Épaisseur de la ligne réduite */
+            background-color: black; /* Couleur de la ligne */
+            width: 100%; /* Largeur de la ligne */
         }
 
         main {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
-            position: relative; /* Ajouté pour positionner le lien caché */
+            min-height: 100vh;
+            text-align: center;
+            padding: 1rem;
+            max-width: 60%; /* Limite la largeur du contenu pour éviter le zoom */
+            margin: 0 auto; /* Centre le contenu */
         }
 
         .photo {
-            max-width: 30%;
-            margin-right: 2rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto; /* Centrer l'image */
+            max-width: 100%; /* Laisse l'image utiliser toute la largeur */
+            height: auto; /* Conserve le ratio d'aspect */
             border-radius: 10px;
-        }
-
-        .inspiring-text {
-            max-width: 60%;
-        }
-
-        h1,
-        h2 {
-            color: var(--primary-color);
+            margin-bottom: 2rem;
         }
 
         dt, p {
-            text-align: left; /* Aligne le texte en justifié */
+            text-align: justify; /* Aligne le texte en justifié */
             max-width: 100%; /* S'assurer que le texte ne dépasse pas la page */
             overflow-wrap: break-word; /* Évite le débordement des mots longs */
         }
 
-        /* Section avec fond blanc pour le bouton et traits de séparation */
-        .cta-section {
-            background-color: rgba(245, 239, 230, 1); /* Fond blanc pour la section */
-            padding: 2rem 0; /* Padding pour espacer la section */
-            text-align: center; /* Centre le bouton dans la section */
-            border-top: 1px solid black; /* Trait de séparation en haut */
-            border-bottom: 1px solid black; /* Trait de séparation en bas */
-        }
-
-        .cta-button {
-            background-color: rgb(0, 84, 74); 
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 1rem auto; /* Centre le bouton horizontalement */
-            display: block;
-            text-align: center;
-            max-width: 400px; /* Largeur maximale pour le bouton */
-        }
-
         footer {
-            background-color: var(--primary-color);
-            color: white;
-	    font-family: 'Playfair Display', serif;
-            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            position: relative; /* Position relative pour le footer */
+            bottom: 0;
+            width: 100%;
         }
 
         footer img {
-            max-width: 35px;
+            max-width: 50%;
+            height: auto;
+        }
+
+        section {
+            margin: 2rem 0; /* Espacement entre les sections */
+            border-top: 1px solid black; /* Ligne de séparation noire */
+            padding-top: 2rem; /* Espace entre la ligne et le contenu */
+        }
+
+        h1, h2 {
+            color: var(--primary-color); /* Couleur des titres */
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            display: inline-block;
         }
 
         @media (max-width: 643px) {
@@ -136,26 +147,40 @@
             main {
                 flex-direction: column; /* Changer l'orientation en colonne sur petits écrans */
                 align-items: center; /* Centrer les éléments */
-                max-width: 100%; /*            
+
+                max-width: 80%; /*            
 	    }
 
             dt, p {
-            	text-align: left; /* Aligne le texte en justifié */
-            	max-width: 100%; /* S'assurer que le texte ne dépasse pas la page */
+            	text-align: justify; /* Aligne le texte en justifié */
+            	max-width: 80%; /* S'assurer que le texte ne dépasse pas la page */
             	overflow-wrap: break-word; /* Évite le débordement des mots longs */
             }
 
             .photo {
                 max-width: 100%; /* Ajuste l'image pour utiliser toute la largeur */
                 margin-bottom: 1rem; /* Ajoute de l'espace en bas de l'image */
-                align-items: center; /* Centrer les éléments */
 		height: auto;
             }
+
+            footer {
+            	display: flex;
+            	justify-content: space-between;
+            	align-items: center;
+            	padding: 0rem;
+            	background-color: var(--primary-color);
+            	color: white;
+            	position: relative; /* Position relative pour le footer */
+           	 bottom: 0;
+           	 width: 100%;
+        }
             footer img {
-           	max-width: 100%;
+           	max-width: 20%;
             	height: auto;
+            	margin: right;
             }
         }
+	
 	
     </style>
 </head>
