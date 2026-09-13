@@ -519,3 +519,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 @media (prefers-reduced-motion:reduce){
   .linkedin-card,.cooperation-feature,.tool-card,.network-gs{transition:none!important}
 }
+
+/* Correction photo principale ONU : conserver le cadrage original carré */
+.hero-portrait .portrait-frame img{
+  width:100%;
+  aspect-ratio:1 / 1 !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+.hero-portrait .portrait-frame{
+  border-radius:36px 36px 96px 36px;
+}
+@media (max-width:760px){
+  .hero-portrait .portrait-frame img{aspect-ratio:1 / 1 !important;}
+}
