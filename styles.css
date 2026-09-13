@@ -533,3 +533,26 @@ a:focus-visible,button:focus-visible,summary:focus-visible{
 @media (max-width:760px){
   .hero-portrait .portrait-frame img{aspect-ratio:1 / 1 !important;}
 }
+
+
+/* FINAL HERO PHOTO FIX - force full square image */
+.hero-portrait .portrait-frame{
+  aspect-ratio:1 / 1 !important;
+  height:auto !important;
+  overflow:hidden !important;
+  position:relative !important;
+  border-radius:36px 36px 96px 36px !important;
+}
+.hero-portrait .portrait-frame img{
+  position:absolute !important;
+  inset:0 !important;
+  width:100% !important;
+  height:100% !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:cover !important;
+  object-position:center center !important;
+}
+@media (max-width:760px){
+  .hero-portrait .portrait-frame{aspect-ratio:1 / 1 !important;}
+}
