@@ -419,209 +419,103 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #6f
 .nav-links a[aria-current="page"]:not(.nav-contact):not(.nav-linkedin){color:#2f5d48}
 .nav-links a[aria-current="page"]:not(.nav-contact):not(.nav-linkedin)::after{right:0}
 
-/* ---- V13 · polish global, favicon-ready identity, cards ---- */
+/* ---- V12 research pass · evidence-based refinements ---- */
 :root{
-  --paper-3:#fbf9f3;
-  --sage:#dfe9de;
-  --teal-soft:#2c6355;
-  --blue-soft:#0f4d73;
-  --shadow-soft:0 18px 44px rgba(7,26,20,.07);
-  --shadow-deep:0 28px 72px rgba(7,26,20,.16);
+  --shadow-subtle:0 14px 34px rgba(7,26,20,.055);
+  --shadow-card:0 20px 52px rgba(7,26,20,.075);
 }
-html{scroll-padding-top:96px}
-body{
-  background:linear-gradient(180deg,#f8f5ef 0%,#f4f1e9 35%,#f2eee5 100%);
-  text-rendering:optimizeLegibility;
+
+/* Preserve V12 identity, improve hierarchy and scanability. */
+.section-title-grid{align-items:start}
+.section-intro{max-width:60ch;line-height:1.72}
+.hero-lead{max-width:46rem;line-height:1.68}
+.current-roles strong,.hero-facts strong{line-height:1.25}
+.current-roles span,.hero-facts span{line-height:1.42}
+
+/* Clear focus and larger interactive targets. */
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:3px solid #5e9e46!important;
+  outline-offset:4px!important;
 }
-::selection{background:rgba(183,239,74,.48);color:var(--ink)}
-.site-header{background:rgba(248,245,239,.86)!important;backdrop-filter:blur(18px);border-bottom:1px solid rgba(7,26,20,.06)!important}
-.site-header.scrolled{background:rgba(248,245,239,.95)!important;box-shadow:0 18px 36px rgba(7,26,20,.05)!important}
-.nav-wrap{height:82px}
-.nav-links{gap:22px}
-.nav-links a{color:#24352e}
-.nav-contact{background:#fff;border-color:rgba(7,26,20,.14);box-shadow:0 8px 22px rgba(7,26,20,.05)}
-.hero{
-  background:
-    radial-gradient(circle at 88% 16%, rgba(183,239,74,.18), transparent 20%),
-    radial-gradient(circle at 5% 0%, rgba(114,215,164,.12), transparent 25%),
-    linear-gradient(180deg,#f8f5ef 0%,#f5f2eb 55%,#f0ece3 100%)!important;
-}
-.hero-noise{opacity:.18}
-.hero-copy{position:relative}
-.hero-copy::after{content:"";position:absolute;left:-28px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(7,26,20,.06),transparent)}
-.hero h1{max-width:14ch}
-.hero-lead{font-size:clamp(1.08rem,1.55vw,1.26rem);max-width:46rem}
-.hero-actions .button{min-height:50px;padding-inline:22px;box-shadow:0 8px 22px rgba(7,26,20,.05)}
-.current-roles{gap:14px!important}
-.current-roles div,
-.hero-facts div{
-  background:rgba(255,255,255,.58);
-  border:1px solid rgba(7,26,20,.08);
-  border-radius:20px;
-  padding:14px 16px;
-  box-shadow:0 10px 26px rgba(7,26,20,.04);
-}
-.current-roles-label{padding-top:12px}
-.hero-facts{gap:14px!important}
-.hero-facts span{line-height:1.35}
-.portrait-frame{box-shadow:var(--shadow-deep)!important}
-.intro-band{background:linear-gradient(90deg,#071a14 0%,#0f2a22 100%)}
-.intro-band-grid{height:82px}
-.section-title-grid{margin-bottom:48px}
-.section-kicker{color:#567166}
-.system-card{
-  background:linear-gradient(180deg,rgba(255,255,255,.45),rgba(255,255,255,.24));
-  box-shadow:0 10px 24px rgba(7,26,20,.03);
-}
-.system-card:hover{box-shadow:var(--shadow-soft)}
-.projects-grid{gap:20px}
-.project,
-.cooperation-feature,
-.tools-panel,
-.contact-panel,
-.video-archives,
-.network-row{box-shadow:var(--shadow-soft)}
-.project{
-  border:1px solid rgba(255,255,255,.08)!important;
-}
-.project p{line-height:1.68}
-.project-meta{letter-spacing:.16em}
-.project-brand-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px;min-height:100%}
-.gs-stage{
-  background:
-    radial-gradient(circle at 16% 14%,rgba(183,239,74,.3),transparent 24%),
-    radial-gradient(circle at 85% 18%,rgba(114,215,164,.28),transparent 26%),
-    linear-gradient(145deg,#f8fbf7 0%,#edf4eb 48%,#e0eadb 100%)!important;
-}
-.gs-stage::before,.gs-stage::after{border-color:rgba(7,26,20,.08)!important}
-.brand-shell{
-  width:min(100%,500px);
-  padding:24px 26px;
-  border-radius:26px;
-  background:rgba(255,255,255,.7);
-  border:1px solid rgba(7,26,20,.06);
-  box-shadow:0 16px 42px rgba(7,26,20,.08);
+.nav-links a,.button,.text-link,.cooperation-actions a,.project-cta{min-height:24px}
+
+/* Slightly stronger project storytelling without redesigning cards. */
+.project-content{gap:0}
+.project-content>p:not(.project-meta){line-height:1.7}
+.project-proof{
   display:grid;
-  place-items:center;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:22px;
 }
-.gs-real-logo-horizontal{width:min(100%,420px)!important;max-width:100%;height:auto}
-.gs-stage p{font-size:.7rem;color:#4e6259}
-.project-gs .project-content{background:linear-gradient(145deg,#0a2118 0%,#0f2b20 100%)!important}
-.project-peace .project-content,
-.project-peace{background:#141210!important}
-.project-peace .project-meta{color:#d5c7a1}
-.project-media-peace img{object-position:center 40%}
-.project-actions a{opacity:.96}
-.un-section{background:linear-gradient(180deg,#e5efe0 0%,#dfe8d9 100%)!important}
-.aiodd-inline{background:rgba(255,255,255,.65)!important;border-color:rgba(7,26,20,.08)!important}
-.timeline{border-top-color:rgba(7,26,20,.1)}
-.timeline-item{padding-block:38px}
-.timeline-content p{line-height:1.65}
-.timeline-logo-box{box-shadow:0 8px 24px rgba(7,26,20,.04)}
-.timeline-logo-box.timeline-gs{
-  background:linear-gradient(145deg,#f9fcf7,#eaf2e4)!important;
-  border-color:rgba(7,26,20,.08)!important;
+.project-proof span{
+  min-width:0;
+  padding:11px 12px;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:14px;
+  background:rgba(255,255,255,.035);
+  display:grid;
+  gap:3px;
 }
-.cooperation-feature-grid{gap:20px}
-.cooperation-feature{
-  background:linear-gradient(180deg,#ffffff 0%,#fbfaf6 100%);
-  border-color:rgba(7,26,20,.09)!important;
-  min-height:320px;
+.project-proof b{
+  font-size:.58rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#90a69b;
 }
-.cooperation-feature h3{font-size:clamp(2rem,3vw,2.8rem)}
-.cooperation-feature p{line-height:1.65}
-.peace-feature{
-  background:linear-gradient(160deg,#10100f 0%,#191612 52%,#1d1f1a 100%)!important;
-  border-color:rgba(230,223,200,.12)!important;
-  color:#f4efe4!important;
+.project-proof small{
+  font-size:.72rem;
+  line-height:1.35;
+  color:#edf3ef;
+  font-weight:700;
 }
-.peace-feature-visual{display:grid;gap:14px}
-.peace-mini-kicker{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#cbbd96;font-weight:850}
-.peace-lockup{
-  min-height:210px!important;
-  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.06))!important;
-  border-color:rgba(255,255,255,.1)!important;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+.project-cta{
+  display:inline-flex;
+  align-items:center;
+  width:max-content;
+  margin-top:18px;
+  font-size:.78rem;
+  font-weight:800;
+  color:#f4f7f5;
+  text-decoration:underline;
+  text-underline-offset:4px;
 }
-.peace-lockup strong{font-size:clamp(2.35rem,4vw,3.4rem)!important;letter-spacing:-.04em;color:#f6efdc!important}
-.peace-lockup span:last-child{color:#d3c39c!important}
-.peace-mini-shot{margin:0;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#222}
-.peace-mini-shot img{width:100%;height:180px;object-fit:cover;object-position:center 34%;display:block;filter:saturate(.88)}
-.peace-mini-shot figcaption{padding:10px 12px;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:#cdc4ae;background:rgba(255,255,255,.03)}
-.peace-feature .project-meta{color:#d4c59a!important}
-.peace-feature h3{color:#fff7e8}
-.peace-feature p{color:#e5dcc7}
-.peace-feature .cooperation-actions a{color:#fff7e8!important}
-.icc-feature{
-  background:linear-gradient(135deg,#fbf4e6 0%,#fffdf8 34%,#eef7ff 100%)!important;
-  border-color:rgba(15,77,115,.14)!important;
+
+/* Green Spheres: keep the actual brand visible and crisp. */
+.gs-real-logo{filter:none!important}
+.timeline-gs img,.network-gs img{filter:none!important}
+.network-gs{cursor:pointer}
+.network-gs:hover{background:#e7f0e2!important}
+
+/* Give partner / engagement cards equal visual rhythm. */
+.cooperation-feature{box-shadow:0 10px 30px rgba(7,26,20,.035)}
+.cooperation-feature:hover{box-shadow:var(--shadow-card)}
+.cooperation-feature p{line-height:1.68}
+.cooperation-actions a{padding-block:4px}
+
+/* Tools are functional links: make the affordance clearer. */
+.tool-card{box-shadow:0 8px 22px rgba(7,26,20,.025)}
+.tool-card b{display:inline-flex;align-items:center;gap:4px}
+.tool-card:hover{box-shadow:var(--shadow-subtle)}
+
+/* Contact remains simple: one email + one professional network link. */
+.linkedin-card{transition:transform .2s ease,background .2s ease}
+.linkedin-card:hover{transform:translateY(-2px);background:#173c2f}
+
+/* Prevent visual jank as media loads. */
+.project-media img,.timeline-item img,.cooperation-logo img,.network-logo img,.un-photo-card img,.portrait-frame img{
+  height:auto;
 }
-.icc-feature .cooperation-visual-photo{
-  border-radius:22px;
-  overflow:hidden;
-  box-shadow:0 14px 34px rgba(15,77,115,.08);
-  border:1px solid rgba(15,77,115,.12);
-}
-.icc-feature .cooperation-visual-photo img{background:#ddeefd!important;object-fit:cover!important;object-position:center 22%!important}
-.icc-feature .visual-chip{letter-spacing:.08em}
-.sdg-feature{
-  background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%)!important;
-  border-color:rgba(22,73,106,.12)!important;
-}
-.sdg-chip-row{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
-.sdg-chip-row span{
-  display:inline-flex;align-items:center;min-height:32px;padding:0 12px;border-radius:999px;
-  font-size:.68rem;font-weight:800;letter-spacing:.06em;background:#eef4fb;color:#20506d;border:1px solid rgba(32,80,109,.1)
-}
-.tools-panel{
-  background:linear-gradient(135deg,#f4fafb 0%,#ffffff 42%,#f5faf1 100%)!important;
-  border-color:rgba(7,26,20,.08)!important;
-}
-.tool-card{
-  border-color:rgba(7,26,20,.09)!important;
-  border-radius:24px!important;
-  box-shadow:0 10px 24px rgba(7,26,20,.03)!important;
-}
-.tool-card::before{height:8px!important;border-radius:22px 22px 0 0}
-.tool-card strong{margin-top:18px}
-.network-row{border-color:rgba(7,26,20,.08)!important}
-.network-logo{background:linear-gradient(180deg,#fff 0%,#fbfaf5 100%)}
-.network-gs{background:linear-gradient(145deg,#f9fcf7,#edf4ea)!important}
-.network-gs .gs-network-logo{width:min(170px,100%)!important;max-height:72px!important;height:auto!important}
-.archive-lite{background:linear-gradient(180deg,#ece7dc 0%,#e6e0d3 100%)}
-.video-archives{border:1px solid rgba(7,26,20,.08);border-radius:26px;background:rgba(255,255,255,.55)}
-.video-archives summary{list-style:none;cursor:pointer;padding:22px 26px;font-weight:800}
-.video-archives summary::-webkit-details-marker{display:none}
-.contact-section{background:linear-gradient(135deg,#b8ef4b 0%,#a8e848 36%,#8dd95b 100%)!important}
-.contact-panel{
-  background:linear-gradient(160deg,#071a14 0%,#0f261f 100%)!important;
-  border:1px solid rgba(255,255,255,.06);
-}
-.contact-panel p{line-height:1.65}
-.contact-actions-row{display:flex;gap:12px;flex-wrap:wrap}
-.button-soft{
-  background:#132f25;color:#fff;border:1px solid rgba(255,255,255,.14)
-}
-.button-soft:hover{transform:translateY(-2px);background:#1a3a2e}
-.button-soft-light{background:#fff;color:var(--ink);border-color:#fff}
-.button-soft-light:hover{background:#eff4f1}
-.contact-place{opacity:.86}
-.site-footer{background:#06150f;color:#f2eee5}
-.footer-grid{align-items:center}
+
 @media (max-width:1050px){
-  .hero-copy::after{display:none}
-  .icc-feature{grid-column:auto!important}
+  .project-proof{grid-template-columns:repeat(3,minmax(120px,1fr))}
 }
 @media (max-width:760px){
-  .nav-wrap{height:74px}
-  .nav-links{gap:6px}
-  .current-roles div,
-  .hero-facts div{padding:13px 14px}
-  .project-brand-stage{padding:28px}
-  .brand-shell{padding:18px 20px}
-  .contact-actions-row{display:grid;grid-template-columns:1fr}
+  .project-proof{grid-template-columns:1fr}
+  .project-proof span{padding:10px 12px}
+  .section-intro{max-width:none}
+  .nav-links a{min-height:44px;display:flex;align-items:center}
 }
-@media (max-width:480px){
-  .hero h1{max-width:12ch}
-  .peace-mini-shot img{height:150px}
+@media (prefers-reduced-motion:reduce){
+  .linkedin-card,.cooperation-feature,.tool-card,.network-gs{transition:none!important}
 }

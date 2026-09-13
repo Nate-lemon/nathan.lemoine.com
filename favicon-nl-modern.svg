@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Nathan Lemoine">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071a14"/><stop offset="1" stop-color="#123c2d"/></linearGradient>
+  <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8ef63"/><stop offset="1" stop-color="#72d7a4"/></linearGradient>
+</defs>
+<rect x="7" y="7" width="114" height="114" rx="30" fill="url(#bg)"/>
+<circle cx="92" cy="34" r="15" fill="url(#accent)"/>
+<g fill="none" stroke="#eef8f2" stroke-opacity=".13" stroke-width="2.2" stroke-linecap="round">
+<path d="M-4 31c20-10 37-9 54 0 14 8 29 10 46 4 15-5 29-4 42 4"/>
+<path d="M-5 48c22-9 39-7 55 2 13 7 29 8 46 3 16-5 29-3 43 5"/>
+<path d="M-3 67c21-9 39-8 55 1 13 8 28 9 44 4 16-5 30-3 44 5"/>
+<path d="M-2 87c20-8 38-7 54 1 13 7 28 8 43 4 17-5 30-3 45 6"/>
+</g>
+<g fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M34 88V41l26 34V41"/>
+  <path d="M69 41v47h27"/>
+</g>
+</svg>
